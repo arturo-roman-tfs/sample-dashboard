@@ -201,7 +201,7 @@ def serve_layout():
                                     {"label": "Last 90 days", "value": 11},
                                     {"label": "Last 365 days", "value": 12},
                                 ],
-                                value=10,
+                                value=11,
                             ),
                         ],
                         className="four columns",
@@ -452,9 +452,9 @@ def update_summary_figure(selected_date_filter):
     revenue_graph.add_trace(
         revenue_go, secondary_y=False,
     )
-    revenue_graph.add_trace(
-        cum_revenue_go, secondary_y=True,
-    )
+    # revenue_graph.add_trace(
+    #     cum_revenue_go, secondary_y=True,
+    # )
     revenue_graph.update_layout(revenue_layout)
 
     turnover_go = go.Scatter(
